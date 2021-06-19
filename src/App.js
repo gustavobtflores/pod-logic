@@ -1,12 +1,13 @@
 import React from "react";
-import "./reset.css";
 import "./App.css";
-import PodcastHeader from "./components/PodcastHeader";
+import Home from "./pages/Home";
 
 function App() {
 	return (
 		<div className="App">
-			<PodcastHeader />
+			<div className="container">
+				<Home />
+			</div>
 		</div>
 	);
 }

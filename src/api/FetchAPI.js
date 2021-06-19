@@ -5,3 +5,10 @@ export const basicFetch = async (endpoint) => {
 	const data = await req.json();
 	return data;
 };
+
+const getPodcastDetails = async () => {
+	const podcastDetails = await basicFetch(`/podcast/details.json`);
+	return podcastDetails;
+};
+
+export default getPodcastDetails;

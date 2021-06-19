@@ -1,0 +1,69 @@
+.podcast-about {
+	display: none;
+}
+
+@media (min-width: 768px) {
+	::-webkit-scrollbar {
+		width: 8px;
+	}
+
+	::-webkit-scrollbar-track {
+		background: transparent;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: #1d546b;
+		border-radius: 6px;
+	}
+
+	.podcast-about {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.about-title {
+		margin-bottom: 0.8rem;
+	}
+
+	.episodes-section {
+		width: 60%;
+		overflow: auto;
+		border-radius: 0 8px 8px 0;
+	}
+
+	.podcast-about-description {
+		font-style: italic;
+		opacity: 0.5;
+		line-height: 19px;
+		margin-bottom: 0.5rem;
+	}
+
+	.read-more-btn {
+		font-weight: 600;
+		color: rgba(77, 193, 242, 1);
+		font-style: italic;
+		margin-bottom: 1.5rem;
+		user-select: none;
+		display: flex;
+	}
+
+	.read-more-btn:hover {
+		cursor: pointer;
+	}
+
+	.hidden {
+		background: linear-gradient(180deg, rgba(45, 86, 103, 0) 80%, #2d5667 100%);
+		max-height: 62px;
+		overflow: hidden;
+	}
+
+	.icon {
+		margin-left: 0.5rem;
+		width: 12px;
+	}
+
+	.read-less-icon {
+		transform: rotate(180deg);
+		align-self: flex-end;
+	}
+}
