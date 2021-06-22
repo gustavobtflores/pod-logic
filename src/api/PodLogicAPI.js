@@ -15,3 +15,9 @@ export const getEpisodeInfo = async (id) => {
 	const episodeInfo = await basicFetch(`/podcast/episodes/${id}/details.json`);
 	return episodeInfo;
 };
+
+export const EpisodesList = async () => {
+	const episodeInfo = await basicFetch(`/podcast/details.json`);
+	const episodesList = episodeInfo.episodes;
+	return episodesList;
+};
