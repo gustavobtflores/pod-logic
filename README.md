@@ -8,7 +8,7 @@
 
 - O projeto deve ser clonado a partir do link: https://github.com/gustavobtflores/pod-logic.git
 
-- Executar o comando:
+- Executar o comando na pasta do projeto:
 
   
 
