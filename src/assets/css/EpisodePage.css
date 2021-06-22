@@ -74,6 +74,10 @@
 	display: none;
 }
 
+.close-btn-desktop {
+	display: none;
+}
+
 @media screen and (min-width: 900px) {
 	.episodePage-container {
 		display: flex;
@@ -125,6 +129,7 @@
 	}
 
 	.close-btn-desktop {
+		display: initial;
 		width: 18px;
 		height: 18px;
 		position: relative;
