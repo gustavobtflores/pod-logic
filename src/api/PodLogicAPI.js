@@ -6,9 +6,12 @@ export const basicFetch = async (endpoint) => {
 	return data;
 };
 
-const getPodcastDetails = async () => {
+export const getPodcastDetails = async () => {
 	const podcastDetails = await basicFetch(`/podcast/details.json`);
 	return podcastDetails;
 };
 
-export default getPodcastDetails;
+export const getEpisodeInfo = async (id) => {
+	const episodeInfo = await basicFetch(`/podcast/episodes/${id}/details.json`);
+	return episodeInfo;
+};

@@ -1,14 +1,19 @@
 import React from "react";
-import "./App.css";
+import "./assets/css/App.css";
 import Home from "./pages/Home";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import EpisodePage from "./pages/EpisodePage";
 
 function App() {
 	return (
-		<div className="App">
-			<div className="container">
-				<Home />
+		<Router>
+			<div className="App">
+				<Switch>
+					<Route path="/" exact component={Home} />
+					<Route path="/episode:id" component={EpisodePage} />
+				</Switch>
 			</div>
-		</div>
+		</Router>
 	);
 }
 

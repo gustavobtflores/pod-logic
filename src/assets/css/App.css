@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+* {
+	color: white;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+body {
+	margin: 0;
+	font-family: "Raleway", sans-serif;
+}
+
+.container-episodesList {
+	background: linear-gradient(180deg, #244857 0%, #287393 100%);
+	width: 100vw;
+	height: 100vh;
+}

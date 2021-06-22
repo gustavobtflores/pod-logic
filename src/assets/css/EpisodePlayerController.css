@@ -1,0 +1,40 @@
+.episode-player-slider {
+	display: flex;
+	width: 100%;
+	padding: 0 2rem;
+}
+
+.progress-bar {
+	outline: none;
+	width: 100%;
+}
+.episode-player-controllers {
+	display: flex;
+	align-items: center;
+}
+.btn {
+	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: none;
+	padding: 0;
+}
+
+.play-pause {
+	width: 60px;
+	height: 61px;
+	background-color: rgba(50, 158, 203, 1);
+	border-radius: 50%;
+}
+
+.btn:nth-child(n + 1) {
+	margin: 0.5rem;
+}
+
+.skip-previous {
+	width: 42px;
+	height: 42px;
+	background: url(../../assets/img/skipPrevious-btn.svg) center no-repeat;
+	border-radius: 50%;
+}

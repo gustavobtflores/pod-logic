@@ -1,13 +1,13 @@
 import React from "react";
-import EpisodesList from "../components/EpisodesList/EpisodesList";
+import Episodes from "../components/Episodes";
 import PodcastHeader from "../components/PodcastHeader";
 
 const Home = () => {
 	return (
-		<>
+		<div className="container-episodesList">
 			<PodcastHeader />
-			<EpisodesList />
-		</>
+			<Episodes />
+		</div>
 	);
 };
 

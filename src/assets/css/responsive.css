@@ -2,7 +2,60 @@
 	display: none;
 }
 
-@media (min-width: 768px) {
+.read-more-btn {
+	font-weight: 600;
+	color: rgba(77, 193, 242, 1);
+	font-style: italic;
+	margin-bottom: 1.5rem;
+	user-select: none;
+	display: flex;
+}
+
+.read-more-btn:hover {
+	cursor: pointer;
+}
+
+.hidden-episodeDescription {
+	mask-image: linear-gradient(to top, rgba(45, 86, 103, 0) 0%, #2d5667 25%);
+	-webkit-mask-image: linear-gradient(
+		to top,
+		rgba(45, 86, 103, 0) 0%,
+		#2d5667 80%
+	);
+	overflow: hidden;
+	max-height: 120px;
+}
+
+.read-less-icon {
+	transform: rotate(180deg);
+	align-self: flex-end;
+}
+
+.icon {
+	margin-left: 0.5rem;
+	width: 12px;
+}
+
+@media screen and (min-width: 900px) {
+	.App {
+		display: flex;
+		height: 100vh;
+		justify-content: center;
+		align-items: center;
+		background: linear-gradient(240deg, #244857 0%, #1d546b 100%);
+	}
+	.container-episodesList {
+		display: flex;
+		flex-direction: row;
+		width: 768px;
+		height: 420px;
+	}
+	.episode-details-container {
+		display: flex;
+		padding: 2rem;
+		background: #27657f;
+	}
+
 	::-webkit-scrollbar {
 		width: 8px;
 	}
@@ -25,7 +78,7 @@
 		margin-bottom: 0.8rem;
 	}
 
-	.episodes-section {
+	.episodes-container {
 		width: 60%;
 		overflow: auto;
 		border-radius: 0 8px 8px 0;
@@ -38,32 +91,9 @@
 		margin-bottom: 0.5rem;
 	}
 
-	.read-more-btn {
-		font-weight: 600;
-		color: rgba(77, 193, 242, 1);
-		font-style: italic;
-		margin-bottom: 1.5rem;
-		user-select: none;
-		display: flex;
-	}
-
-	.read-more-btn:hover {
-		cursor: pointer;
-	}
-
-	.hidden {
-		background: linear-gradient(180deg, rgba(45, 86, 103, 0) 80%, #2d5667 100%);
+	.hidden-about {
+		mask-image: linear-gradient(to top, rgba(45, 86, 103, 0) 0%, #2d5667 25%);
 		max-height: 62px;
 		overflow: hidden;
-	}
-
-	.icon {
-		margin-left: 0.5rem;
-		width: 12px;
-	}
-
-	.read-less-icon {
-		transform: rotate(180deg);
-		align-self: flex-end;
 	}
 }
