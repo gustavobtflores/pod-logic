@@ -4,6 +4,7 @@ import { getEpisodeInfo } from "../api/PodLogicAPI";
 import EpisodePlayerController from "../components/EpisodePage/EpisodePlayerController";
 import "../assets/css/EpisodePage.css";
 import EpisodeDescription from "../components/EpisodePage/EpisodeDescription";
+import closeBtnDesktop from "../assets/img/close-btn-desktop.svg";
 
 const EpisodePage = () => {
 	const [episodeInfo, setEpisodeInfo] = useState({
@@ -54,6 +55,14 @@ const EpisodePage = () => {
 						", "
 					)}`}</span>
 				</section>
+				<button
+					className="close-btn-desktop btn"
+					onClick={() => {
+						history.push("/");
+					}}
+				>
+					<img src={closeBtnDesktop} alt="" />
+				</button>
 			</div>
 			<EpisodePlayerController AudioURL={episodeInfo.audio} />
 		</div>
