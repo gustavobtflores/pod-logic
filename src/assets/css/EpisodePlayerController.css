@@ -2,12 +2,93 @@
 	display: flex;
 	width: 100%;
 	padding: 0 2rem;
+	align-items: center;
 }
 
 .progress-bar {
+	--bar-bg: #446c7c;
+	--range-bg: #319bc8;
+	--range-selector-bg: #ffffff;
+	--seek-before-width: 0px;
+
+	appearance: none;
 	outline: none;
 	width: 100%;
+	background: var(--bar-bg);
+	border-radius: 10px;
+	margin: 0 0.8rem;
+	height: 10px;
+	position: relative;
 }
+
+.progress-bar::before {
+	content: "";
+	height: 10px;
+	width: var(--seek-before-width);
+	background-color: var(--range-bg);
+	border-radius: 10px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	cursor: pointer;
+}
+.progress-bar::-webkit-slider-thumb {
+	appearance: none;
+}
+
+.progress-bar:hover::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	height: 12px;
+	width: 12px;
+	border-radius: 50%;
+	border: none;
+	background-color: var(--range-selector-bg);
+	cursor: pointer;
+	position: relative;
+	z-index: 3;
+}
+
+/*progress bar firefox*/
+
+.progress-bar::-moz-range-track {
+	height: 10px;
+	border-radius: 10px;
+	background: var(--bar-bg);
+	width: 100%;
+	outline: none;
+}
+
+.progress-bar::-moz-focus-outer {
+	border: 0;
+}
+
+.progress-bar::-moz-range-progress {
+	background-color: var(--range-bg);
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	height: 10px;
+}
+
+.progress-bar::-moz-range-thumb {
+	height: 12px;
+	width: 12px;
+	border-radius: 50%;
+	border: transparent;
+	background-color: var(--range-selector-bg);
+	cursor: pointer;
+	position: relative;
+	z-index: 3;
+}
+
+/*progress bar firefox*/
+
+.time-track {
+	opacity: 0.5;
+	font-size: 16px;
+	line-height: 18px;
+}
+
 .episode-player-controllers {
 	display: flex;
 	align-items: center;
