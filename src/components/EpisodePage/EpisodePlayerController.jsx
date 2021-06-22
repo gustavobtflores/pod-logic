@@ -115,7 +115,7 @@ const EpisodePlayerController = ({ AudioURL, episodeInfo }) => {
 	return (
 		<PlayerProvider>
 			<div className="episode-player">
-				<audio src={AudioURL} ref={audioPlayer} preload="metadata" />
+				<audio src={AudioURL} ref={audioPlayer} />
 				<div className="episode-player-slider">
 					<span className="time-track">{convertTime(currentTime)}</span>
 					<input
@@ -126,7 +126,9 @@ const EpisodePlayerController = ({ AudioURL, episodeInfo }) => {
 						onChange={changeRange}
 					/>
 					<span className="time-track">
-						{convertTime(episodeInfo.duration)}
+						{duration
+							? convertTime(duration)
+							: convertTime(episodeInfo.duration)}
 					</span>
 				</div>
 				<div className="episode-player-controllers">
