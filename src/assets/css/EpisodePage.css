@@ -12,7 +12,7 @@
 .episode-banner {
 	display: flex;
 	justify-content: flex-end;
-	height: 40vh;
+	height: 50%;
 }
 .close-btn {
 	border: none;
