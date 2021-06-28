@@ -37,8 +37,6 @@ const EpisodePage = () => {
 		history.push("/");
 	};
 
-	console.log(participants);
-
 	const participantsString = () => {
 		if (participants.length > 2) {
 			return `${participants.slice(0, participants.length - 1).join(", ")} e ${
