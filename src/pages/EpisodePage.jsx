@@ -22,6 +22,7 @@ const EpisodePage = () => {
 	};
 	const episode = useParams();
 	const { setIsPlaying } = usePlayer(false);
+	const participants = episodeInfo.participants;
 
 	useEffect(() => {
 		const loadAll = async () => {
@@ -34,6 +35,18 @@ const EpisodePage = () => {
 	const backHome = async () => {
 		await setIsPlaying(false);
 		history.push("/");
+	};
+
+	console.log(participants);
+
+	const participantsString = () => {
+		if (participants.length > 2) {
+			return `${participants.slice(0, participants.length - 1).join(", ")} e ${
+				participants[participants.length - 1]
+			}`;
+		} else {
+			return participants.join(" e ");
+		}
 	};
 
 	return (
@@ -57,9 +70,7 @@ const EpisodePage = () => {
 							<h2>{`Episódio ${episodeInfo.episodeNumber} - ${episodeInfo.name}`}</h2>
 							<EpisodeDescription episodeInfo={episodeInfo} />
 						</div>
-						<span className="episode-participants">{`Participantes: ${episodeInfo.participants.join(
-							", "
-						)}`}</span>
+						<span className="episode-participants">{`Participantes: ${participantsString()}`}</span>
 					</section>
 					<button
 						className="close-btn-desktop btn"
