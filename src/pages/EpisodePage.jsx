@@ -39,7 +39,7 @@ const EpisodePage = () => {
 
 	const participantsString = () => {
 		if (participants.length > 2) {
-			return `${participants.slice(0, participants.length - 1).join(", ")} e ${
+			return `${participants.slice(0, -1).join(", ")} e ${
 				participants[participants.length - 1]
 			}`;
 		} else {
