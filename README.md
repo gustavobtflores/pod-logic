@@ -1,24 +1,33 @@
-# Desafio BRLogic
+<h1 align="center">Welcome to pod-logic 👋</h1>
+<p>
+</p>
 
-- Desafio para vaga de desenvolvedor front-end BRLogic
-- Desenvolvido utilizando React.Js
-- O projeto pode ser visualizado em: [PodLogic (pod-logic.vercel.app)](https://pod-logic.vercel.app/)
+<img alt="Podcast fictício - Podlogic" src="https://imgur.com/a/4pxAHBj" />
 
-## Instalação
+> Projeto para criação de um app de podcast fictício, onde o usuário pode visualizar a lista de episódios e ouvi-los
 
-- O projeto deve ser clonado a partir do link: https://github.com/gustavobtflores/pod-logic.git
+### 🏠 [Homepage](https://pod-logic.vercel.app/)
 
-- Executar o comando na pasta do projeto:
+## Install
 
-  
+```sh
+npm install
+```
 
-  ``npm install``
+## Usage
 
+```sh
+npm run start
+```
 
+## Run tests
 
-- E depois:
+```sh
+npm run test
+```
 
-  
+## Author
 
-  ``npm start``
+👤 **Gustavo Bernardo**
 
+- Github: [@gustavobtflores](https://github.com/gustavobtflores)
