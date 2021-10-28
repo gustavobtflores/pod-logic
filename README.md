@@ -2,7 +2,7 @@
 <p>
 </p>
 
-<img alt="Podcast fictício - Podlogic" src="https://imgur.com/a/4pxAHBj" />
+<img alt="Podcast fictício - Podlogic" src="https://i.imgur.com/4MzfEXN.png" />
 
 > Projeto para criação de um app de podcast fictício, onde o usuário pode visualizar a lista de episódios e ouvi-los
 
