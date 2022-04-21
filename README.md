@@ -10,7 +10,7 @@
 
 ## Tecnologias utilizadas :rocket:
 
-- [React](https://reactjs.org/)
+- <a href="https://reactjs.org/" target="_blank">React</a>
 - HTML
 - CSS
 
