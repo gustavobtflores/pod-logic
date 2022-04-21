@@ -20,23 +20,24 @@
 - Descrição do episódio com botão 'Ler mais/menos' :heavy_check_mark:
 - Barra de progresso do áudio :heavy_check_mark:
 - Navegação episódio seguinte/anterior :heavy_check_mark:
+- Desing responsivo :heavy_check_mark:
 
 ## Install
 
 ```sh
-npm install
+npm install // yarn install
 ```
 
 ## Usage
 
 ```sh
-npm run start
+npm run start // yarn start
 ```
 
 ## Run tests
 
 ```sh
-npm run test
+npm run test // yarn run test
 ```
 
 ## Author
