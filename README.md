@@ -11,7 +11,8 @@
 ## Tecnologias utilizadas :rocket:
 
 - [React](https://reactjs.org/)
-- [SASS](https://sass-lang.com/)
+- HTML
+- CSS
 
 ## Funcionalidades :gear:
 
