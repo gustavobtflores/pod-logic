@@ -9,83 +9,80 @@ import { usePlayer } from "../context/PlayerContext";
 import PlayerProvider from "../context/PlayerContext";
 
 const EpisodePage = () => {
-	const [episodeInfo, setEpisodeInfo] = useState({
-		id: "",
-		name: "",
-		description: "",
-		participants: [],
-		episodeNumber: "",
-	});
-	const history = useHistory();
-	const backgroundEpisode = {
-		background: `url(${episodeInfo.cover}) center/cover`,
-	};
-	const episode = useParams();
-	const { setIsPlaying } = usePlayer(false);
-	const participants = episodeInfo.participants;
+  const [episodeInfo, setEpisodeInfo] = useState({
+    id: "",
+    name: "",
+    description: "",
+    participants: [],
+    episodeNumber: "",
+  });
+  const history = useHistory();
+  const backgroundEpisode = {
+    background: `url(${episodeInfo.cover}) center/cover`,
+  };
+  const episode = useParams();
+  const { setIsPlaying } = usePlayer(false);
+  const participants = episodeInfo.participants;
 
-	useEffect(() => {
-		const loadAll = async () => {
-			const episodeDetails = await getEpisodeInfo(episode.id);
-			setEpisodeInfo(episodeDetails);
-		};
-		loadAll();
-	}, [episode.id]);
+  useEffect(() => {
+    const loadAll = async () => {
+      const episodeDetails = await getEpisodeInfo(episode.id);
+      setEpisodeInfo(episodeDetails);
+    };
+    loadAll();
+  }, [episode.id]);
 
-	const backHome = async () => {
-		await setIsPlaying(false);
-		history.push("/");
-	};
+  const backHome = async () => {
+    await setIsPlaying(false);
+    history.push("/");
+  };
 
-	const participantsString = () => {
-		if (participants.length > 2) {
-			return `${participants.slice(0, -1).join(", ")} e ${
-				participants[participants.length - 1]
-			}`;
-		} else {
-			return participants.join(" e ");
-		}
-	};
+  const participantsString = () => {
+    if (participants.length > 2) {
+      return `${participants.slice(0, -1).join(", ")} e ${
+        participants[participants.length - 1]
+      }`;
+    } else {
+      return participants.join(" e ");
+    }
+  };
 
-	return (
-		<PlayerProvider>
-			<div className="episodePage-container">
-				<div className="episode-details-container">
-					<header className="episode-banner" style={backgroundEpisode}>
-						<button
-							title="Botão de fechar"
-							className="close-btn"
-							onClick={backHome}
-						/>
-					</header>
-					<img
-						src={episodeInfo.cover}
-						alt="Capa do episódio"
-						className="episode-cover-image"
-					></img>
-					<section className="episode-information">
-						<div className="description-container">
-							<h2>{`Episódio ${episodeInfo.episodeNumber} - ${episodeInfo.name}`}</h2>
-							<EpisodeDescription episodeInfo={episodeInfo} />
-						</div>
-						<span className="episode-participants">{`Participantes: ${participantsString()}`}</span>
-					</section>
-					<button
-						className="close-btn-desktop btn"
-						onClick={() => {
-							history.push("/");
-						}}
-					>
-						<img src={closeBtnDesktop} alt="" />
-					</button>
-				</div>
-				<EpisodePlayerController
-					AudioURL={episodeInfo.audio}
-					episodeInfo={episodeInfo}
-				/>
-			</div>
-		</PlayerProvider>
-	);
+  return (
+    <PlayerProvider>
+      <div className="episodePage-container">
+        <div className="episode-details-container">
+          <header className="episode-banner" style={backgroundEpisode}>
+            <button
+              title="Botão de fechar"
+              className="close-btn"
+              onClick={backHome}
+            />
+          </header>
+          <img
+            src={episodeInfo.cover}
+            alt="Capa do episódio"
+            className="episode-cover-image"
+          ></img>
+          <section className="episode-information">
+            <div className="description-container">
+              <h2>{`Episódio ${episodeInfo.episodeNumber} - ${episodeInfo.name}`}</h2>
+              <EpisodeDescription episodeInfo={episodeInfo} />
+            </div>
+            <span className="episode-participants">{`Participantes: ${participantsString()}`}</span>
+          </section>
+          <button
+            className="close-btn-desktop btn"
+            onClick={() => {
+              history.push("/");
+            }}
+          >
+            <img src={closeBtnDesktop} alt="" />
+          </button>
+        </div>
+        <EpisodePlayerController AudioURL={episodeInfo.audio} />
+      </div>
+    </PlayerProvider>
+  );
 };
 
 export default EpisodePage;

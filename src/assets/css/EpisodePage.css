@@ -1,139 +1,140 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
 
 .episodePage-container {
-	width: 100vw;
-	height: 100vh;
+  width: 100vw;
+  height: 100vh;
 }
 
 .episode-details-container {
-	height: 80vh;
+  height: 80vh;
 }
 
 .episode-banner {
-	display: flex;
-	justify-content: flex-end;
-	height: 50%;
+  display: flex;
+  justify-content: flex-end;
+  height: 50%;
 }
 .close-btn {
-	border: none;
-	width: 40px;
-	height: 40px;
-	background: url(../../assets/img/close-btn.svg);
-	margin: 1rem 1rem 0 0;
+  border: none;
+  width: 40px;
+  height: 40px;
+  background: url(../../assets/img/close-btn.svg);
+  margin: 1rem 1rem 0 0;
 }
 
 .close-btn:hover {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .episode-information {
-	display: flex;
-	flex-direction: column;
-	background: #27657f;
-	padding: 1.5rem;
-	font-family: "PT Sans", Times;
-	font-size: 14px;
-	line-height: 18px;
-	height: 50%;
-	overflow: auto;
-	justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  background: #27657f;
+  padding: 1.5rem;
+  font-family: "PT Sans", Times;
+  font-size: 14px;
+  line-height: 18px;
+  height: 50%;
+  overflow: auto;
+  justify-content: space-between;
 }
 
 .episode-information h2 {
-	font-family: "Raleway", sans-serif;
-	line-height: 16px;
-	margin-bottom: 0.4rem;
+  font-family: "Raleway", sans-serif;
+  line-height: 16px;
+  margin-bottom: 0.4rem;
 }
 
 .episode-description-paragraph {
-	white-space: pre-line;
+  white-space: pre-line;
 }
 
 .episode-audio {
-	display: flex !important;
+  display: flex !important;
 }
 
 .episode-player {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	width: 100%;
-	height: 20vh;
-	background: #15475b;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 20vh;
+  background: #15475b;
+  align-items: center;
 }
 
 .episode-participants {
-	opacity: 0.5;
-	font-style: italic;
-	font-size: 12px;
-	font-weight: 600px;
+  opacity: 0.5;
+  font-style: italic;
+  font-size: 12px;
+  font-weight: 600px;
 }
 
 .episode-cover-image {
-	display: none;
+  display: none;
 }
 
 .close-btn-desktop {
-	display: none;
+  display: none;
 }
 
 @media screen and (min-width: 900px) {
-	.episodePage-container {
-		display: flex;
-		flex-direction: column;
-		width: 768px;
-		height: 420px;
-	}
+  .episodePage-container {
+    display: flex;
+    flex-direction: column;
+    width: 768px;
+    height: 420px;
+  }
 
-	.episode-banner {
-		display: none;
-	}
+  .episode-banner {
+    display: none;
+  }
 
-	.episode-cover-image {
-		width: 250px;
-		height: 250px;
-		object-fit: cover;
-		display: initial;
-		border-radius: 4px;
-		margin-right: 2rem;
-	}
+  .episode-cover-image {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    display: initial;
+    border-radius: 4px;
+    margin-right: 2rem;
+    flex-shrink: 0;
+  }
 
-	.close-btn {
-		display: none;
-	}
+  .close-btn {
+    display: none;
+  }
 
-	.episode-information {
-		height: 100%;
-		padding: 0;
-	}
+  .episode-information {
+    height: 100%;
+    padding: 0;
+  }
 
-	.episode-player {
-		flex-direction: row;
-		border-radius: 0 0 4px 4px;
-	}
+  .episode-player {
+    flex-direction: row;
+    border-radius: 0 0 4px 4px;
+  }
 
-	.episode-details-container {
-		max-height: 250px;
-		box-sizing: content-box;
-		border-radius: 4px 4px 0 0;
-	}
+  .episode-details-container {
+    max-height: 250px;
+    box-sizing: content-box;
+    border-radius: 4px 4px 0 0;
+  }
 
-	.hidden-episodeDescription {
-		max-height: 125px;
-	}
+  .hidden-episodeDescription {
+    max-height: 125px;
+  }
 
-	.episode-information h2 {
-		font-size: 24px;
-		line-height: 28px;
-	}
+  .episode-information h2 {
+    font-size: 24px;
+    line-height: 28px;
+  }
 
-	.close-btn-desktop {
-		display: initial;
-		width: 18px;
-		height: 18px;
-		position: relative;
-		top: -25px;
-		right: -5px;
-	}
+  .close-btn-desktop {
+    display: initial;
+    width: 18px;
+    height: 18px;
+    position: relative;
+    top: -25px;
+    right: -5px;
+  }
 }
