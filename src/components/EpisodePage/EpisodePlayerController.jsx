@@ -42,7 +42,6 @@ const EpisodePlayerController = ({ AudioURL }) => {
       }
     };
     getAudioDuration();
-    console.log(`effect called`);
   }, [episode]);
 
   const convertTime = (secs) => {
