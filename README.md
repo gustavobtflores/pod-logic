@@ -26,19 +26,19 @@
 ## Install
 
 ```sh
-npm install // yarn install
+npm install | yarn install
 ```
 
 ## Usage
 
 ```sh
-npm run start // yarn start
+npm run start | yarn start
 ```
 
 ## Run tests
 
 ```sh
-npm run test // yarn run test
+npm run test | yarn run test
 ```
 
 ## Author
